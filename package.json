@@ -1,6 +1,6 @@
 {
   "name": "@nethesis/astproxy",
-  "version": "0.0.37",
+  "version": "0.1.0",
   "description": "Node.js proxy for Asterisk PBX",
   "main": "index.js",
   "scripts": {
