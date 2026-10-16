@@ -1,4 +1,4 @@
-name: Astproxy Release on tags
+name: Astproxy Release and Publish on tags
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - '**'
 
 jobs:
-  release-module:
+  npm-publish:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout source code'
@@ -14,6 +14,17 @@ jobs:
         with:
           ref: ${{ github.ref }}
           persist-credentials: false
+      - name: 'Prepare node setup'
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies
+        run: npm ci
+      - name: Publish module
+        run: npm run release
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - name: Create Release
         run: gh release create ${{ github.ref }} --generate-notes
         env:
@@ -21,6 +32,7 @@ jobs:
       - name: Generate SBOM (CycloneDX)
         uses: aquasecurity/trivy-action@v0.36.0
         with:
+          version: 'v0.75.0'
           scan-type: 'fs'
           scan-ref: '.'
           format: cyclonedx
