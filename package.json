@@ -28,7 +28,7 @@
   "dependencies": {
     "asterisk-ami": "0.2.0-beta1",
     "jsplugs": "0.1.0",
-    "moment": "2.22.0",
+    "moment": "2.29.4",
     "winston": "2.3.1"
   },
   "publishConfig": {
