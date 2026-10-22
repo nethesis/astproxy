@@ -32,6 +32,7 @@
   "homepage": "https://github.com/nethesis/astproxy",
   "dependencies": {
     "asterisk-ami": "0.2.0-beta1",
+    "async": "1.0.0",
     "jsplugs": "0.1.0",
     "moment": "2.31.0"
   },
