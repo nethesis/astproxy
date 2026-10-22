@@ -8,7 +8,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test/initialization.js",
     "release": "npm publish",
     "publish:minor": "npm version minor --allow-same-version -m v%s --force",
     "publish:major": "npm version major --allow-same-version -m v%s --force",
