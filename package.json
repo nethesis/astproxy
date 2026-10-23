@@ -8,7 +8,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test/initialization.js",
     "release": "npm publish",
     "publish:minor": "npm version minor --allow-same-version -m v%s --force",
     "publish:major": "npm version major --allow-same-version -m v%s --force",
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/nethesis/astproxy",
   "dependencies": {
     "asterisk-ami": "0.2.0-beta1",
+    "async": "1.0.0",
     "jsplugs": "0.1.0",
     "moment": "2.31.0"
   },
