@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout source code'
-        uses: 'actions/checkout@v7'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           ref: ${{ github.ref }}
           persist-credentials: false
       - name: 'Prepare node setup'
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version: 26
           registry-url: https://registry.npmjs.org/
@@ -30,9 +30,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
       - name: Generate SBOM (CycloneDX)
-        uses: aquasecurity/trivy-action@v0.36.0
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
-          version: 'v0.76.1'
+          version: 'v0.76.2'
           scan-type: 'fs'
           scan-ref: '.'
           format: cyclonedx
