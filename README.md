@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repository is archived. The source code now lives in [nethesis/ns8-nethvoice](https://github.com/nethesis/ns8-nethvoice/tree/main/nethcti-server/root/usr/lib/node/nethcti-server/packages/astproxy) and is built and released with the NethVoice module. Open issues and pull requests there.
+
 ## Node.js Proxy for Asterisk PBX
 
 `Astproxy` is a proxy between [Asterisk PBX system](https://www.asterisk.org/) and your application. It provides the possibility to send *commands* and to receive *events* from Asterisk offering an *abstraction layer* of data to always remain independent from the specific version of the PBX and to offer the possibiity to extend its functionalities to even support other type of PBX systems.
